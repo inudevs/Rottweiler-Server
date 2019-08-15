@@ -1,24 +1,27 @@
 {
-  "name": "coin",
-  "version": "0.0.0",
+  "name": "rottweiler-back",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "babel-node --presets=latest ./bin/www",
-    "dev": "nodemon --exec babel-node --presets=latest ./bin/www"
+    "dev": "nodemon --exec babel-node --presets=latest ./bin/www",
+    "lint": "eslint \"**/*.js\" --fix"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.6.4",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "scryptsy": "^2.1.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-latest": "^6.24.1",
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb-base": "^13.2.0",
-    "eslint-plugin-import": "^2.18.0",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
     "prettier-eslint": "^9.0.0"
   }
 }
