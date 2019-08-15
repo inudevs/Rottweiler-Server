@@ -16,6 +16,7 @@ const UserSchema = new Schema({
     type: String,
     default: 'https://inudevs.github.io/assets/images/profiles/default.jpg',
   },
+  approved: { type: Boolean, default: false },
 });
 
 // statics
