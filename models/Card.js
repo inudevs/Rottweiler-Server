@@ -1,11 +1,11 @@
 import { model, Schema } from 'mongoose';
 
 const NoticeCardSchema = new Schema({
-  TimeStamp: { type: Date, default: Date.now },
-  Title: String,
-  Content: String,
-  Author: String,
-  Board: String,
+  timeStamp: { type: Date, default: Date.now },
+  title: String,
+  content: String,
+  author: String,
+  board: String,
 });
 
 export default model('NoticeCard', NoticeCardSchema);

@@ -12,7 +12,7 @@ router.post('/', (req, res) => {
     }
   });
 
-  Card.deleteMany({ boardId: req.body._id }, (err) => {
+  Card.deleteMany({ board: req.body._id }, (err) => {
     if (err) {
       res.sendStatus(404);
       return;

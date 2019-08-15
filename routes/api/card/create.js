@@ -20,17 +20,17 @@ router.post('/', async (req, res) => {
     card = new NoticeCard();
   } else if (req.body.type === 1) {
     card = new CheckCard();
-    card.Done = req.body.done;
+    card.done = req.body.done;
   } else if (req.body.type === 2) {
     card = new GithubCard();
-    card.Repo = req.body.repo;
-    card.Issue = req.body.issue;
+    card.repo = req.body.repo;
+    card.issue = req.body.issue;
   }
 
-  card.Title = req.body.title;
-  card.Content = req.body.content;
-  card.Author = req.body.author;
-  card.Board = req.body.board;
+  card.title = req.body.title;
+  card.content = req.body.content;
+  card.author = req.body.author;
+  card.board = req.body.board;
 
   card.save((err) => {
     if (err) {
