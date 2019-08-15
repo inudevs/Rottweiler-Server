@@ -19,7 +19,7 @@ app.use(Static(join(__dirname, 'public')));
 app.use('/', router);
 
 connect(
-  'mongodb://localhost:27017/coin',
+  'mongodb://localhost:27017/test',
   { useNewUrlParser: true },
   (err) => {
     if (err) {
