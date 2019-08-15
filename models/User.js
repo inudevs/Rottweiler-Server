@@ -4,7 +4,7 @@ const scrypt = require('scryptsy');
 
 const salt = 'dddd';
 
-const hashPassword = (password) => scrypt(password, salt, 8192, 5, 1, 25).toString('hex');
+const hashPassword = (password) => scrypt(password, salt, 8192, 5, 1, 25).toString('base64');
 
 const UserSchema = new Schema({
   username: String,
@@ -12,7 +12,10 @@ const UserSchema = new Schema({
   usertype: { type: String, default: 'user' },
   admin: { type: Boolean, default: false },
   timestamp: { type: Date, default: Date.now },
-  profile: { type: String, default: 'https://inudevs.github.io/assets/images/profiles/default.jpg' },
+  profile: {
+    type: String,
+    default: 'https://inudevs.github.io/assets/images/profiles/default.jpg',
+  },
 });
 
 // statics
