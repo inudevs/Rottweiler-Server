@@ -3,10 +3,24 @@ import { join } from 'path';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import { connect } from 'mongoose';
+import swaggerUi from 'swagger-ui-express';
+import swaggerJSDoc from 'swagger-jsdoc';
 
 import router from './routes';
 
 const app = express();
+
+const swaggerSpec = swaggerJSDoc({
+  swaggerDefinition: {
+    info: {
+      title: 'Rottweiler',
+      version: '1.0.0', // Version (required)
+      description: 'Project manage solution for INU', // Description (optional)
+    },
+  },
+  apis: ['./routes*.js',],
+});
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.set('json spaces', 2);
 
