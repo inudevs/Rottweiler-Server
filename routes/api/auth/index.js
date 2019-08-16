@@ -21,6 +21,16 @@ router.post('/login', (req, res) => {
   });
 });
 
-router.post('/register', (req, res) => {});
+router.post('/register', (req, res) => {
+  const { username, password } = req.body;
+  User.findOne({ username }, (err, docs) => {
+    if (err) res.sendStatus(500);
+    else if (!docs.length) {
+      const user = new User({ username, password });
+      if (user.create()) res.json({});
+      else res.sendStatus(400);
+    } else res.sendStatus(400);
+  });
+});
 
 export default router;
