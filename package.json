@@ -14,7 +14,9 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.6.4",
     "morgan": "~1.9.1",
-    "scryptsy": "^2.1.0"
+    "scryptsy": "^2.1.0",
+    "swagger-jsdoc": "^3.4.0",
+    "swagger-ui-express": "^4.0.7"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -22,8 +24,6 @@
     "eslint": "^6.1.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
-    "prettier-eslint": "^9.0.0",
-    "swagger-jsdoc": "^3.4.0",
-    "swagger-ui-express": "^4.0.7"
+    "prettier-eslint": "^9.0.0"
   }
 }
