@@ -1,8 +1,9 @@
 import { model } from 'mongoose';
 
-import Card from './Card';
+import BaseCard from './BaseCard';
 
-const CheckCardSchema = new Card({
+const CheckCardSchema = BaseCard;
+CheckCardSchema.add({
   done: Boolean,
 });
 

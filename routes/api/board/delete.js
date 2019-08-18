@@ -1,7 +1,7 @@
 import { Router } from 'express';
 
 import Board from '../../../models/Board';
-import Card from '../../../models/Card';
+import Card from '../../../models/NoticeCard';
 
 const router = Router();
 

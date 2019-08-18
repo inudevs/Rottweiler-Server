@@ -1,8 +1,10 @@
 import { model } from 'mongoose';
 
-import Card from './Card';
+import BaseCard from './BaseCard';
 
-const GithubCardSchema = new Card({
+const GithubCardSchema = BaseCard;
+
+GithubCardSchema.add({
   repo: String,
   issue: Number,
 });

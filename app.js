@@ -11,7 +11,7 @@ import swaggerJSDoc from 'swagger-jsdoc';
 import router from './routes';
 import swaggerOptions from './swagger';
 
-const app = express();  
+const app = express();
 
 const swaggerSpec = swaggerJSDoc(swaggerOptions);
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));

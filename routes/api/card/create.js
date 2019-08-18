@@ -1,7 +1,7 @@
 import { Router } from 'express';
 
 import Board from '../../../models/Board';
-import NoticeCard from '../../../models/Card';
+import NoticeCard from '../../../models/NoticeCard';
 import CheckCard from '../../../models/CheckCard';
 import GithubCard from '../../../models/GithubCard';
 
