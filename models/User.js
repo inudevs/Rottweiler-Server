@@ -21,7 +21,7 @@ const UserSchema = new Schema({
 
 // statics
 
-UserSchema.statics.create = function (username, password) {
+UserSchema.statics.create = (username, password) => {
   const user = new this({
     username,
     password: hashPassword(password),
@@ -31,8 +31,6 @@ UserSchema.statics.create = function (username, password) {
 
 // methods
 
-UserSchema.methods.verify = function (password) {
-  return this.password === hashPassword(password);
-};
+UserSchema.methods.verify = (password) => this.password === hashPassword(password);
 
 export default model('User', UserSchema);
